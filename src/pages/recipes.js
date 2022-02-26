@@ -1,7 +1,7 @@
 import * as React from "react"
-import Layout from "../components/layouts"
+import Layout from "../components/Layout"
 
-const RecipesPage = () => {
+const Recipes = () => {
     return (
         <Layout>
             <h1>Recipes Page</h1>
@@ -10,5 +10,5 @@ const RecipesPage = () => {
     )
 }
 
-export default RecipesPage
+export default Recipes
 
