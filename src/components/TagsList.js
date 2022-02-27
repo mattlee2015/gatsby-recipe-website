@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const TagsList = ({recipes}) => {
   const newTags = setupTags(recipes)
 
-  console.log(newTags)
+  // console.log(newTags)
   return (
     <div className = "tag-container">
       <h4>Recipes</h4>
