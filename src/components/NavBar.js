@@ -17,10 +17,11 @@ const NavBar = () => {
                 <Link to="/recipes" className="nav-link" activeClassName='active-link' onClick={()=> setShow(false)}>Recipes</Link>
                 <Link to="/about" className="nav-link" activeClassName='active-link' onClick={()=> setShow(false)}>About</Link>
                 <Link to="/tags" className="nav-link" activeClassName='active-link' onClick={()=> setShow(false)}>Tags</Link>   
+                 <div className='nav-link contact-link'>
+                    <Link to="/contact" className='btn'>Contact</Link>
+                </div>
             </div>
-            <div className='nav-link'>
-                <Link to="/contact" className='btn'>Contact</Link>
-            </div>
+           
         </div>
     </nav>
   )
