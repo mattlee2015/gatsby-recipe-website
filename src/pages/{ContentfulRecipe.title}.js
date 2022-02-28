@@ -4,14 +4,14 @@ import {graphql, Link} from 'gatsby'
 import Layout from '../components/Layout'
 import { BsClockHistory, BsClock, BsPeople} from 'react-icons/bs'
 import RecipesList from '../components/RecipesList'
-
+import slugify from 'slugify'
 
 
 const RecipeTemplate = ({data}) => {
     
     const recipes = data.allContentfulRecipe.nodes
     const {title, cookTime, content, prepTime, description:{description}, servings, image} = data.contentfulRecipe
-    console.log(data.contentfulRecipe)
+    //console.log(data.contentfulRecipe)
     const pathToImage = getImage(image)
     const {tags, tools, ingredients, instructions} = content
   return (
@@ -41,8 +41,9 @@ const RecipeTemplate = ({data}) => {
                         </div>
                         <p className='recipe-tags'>
                             Tags : {tags.map((tag, index)=>{
+                                const slug = slugify(tag, {lower:true})
                                 return (
-                                    <Link to={`/${tag}`} key={index}>
+                                    <Link to={`/tags/${slug}`} key={index}>
                                         {tag}
                                     </Link>
                                 )

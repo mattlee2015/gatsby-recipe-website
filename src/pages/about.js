@@ -24,6 +24,7 @@ const About = () => {
                    className="about-img"
                    placeholder="blurred"/>
                </section>
+               <br></br>
                <section className="featured-recipes">
                     <h5>Look at this awesomesauce!</h5>
                     <RecipesList recipes={recipes}/>
